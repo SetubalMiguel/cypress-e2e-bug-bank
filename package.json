@@ -1,0 +1,26 @@
+{
+  "name": "cypress-e2e-bug-bank",
+  "version": "1.0.0",
+  "description": "Testes E2E - BugBank",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SetubalMiguel/cypress-e2e-bug-bank.git"
+  },
+  "keywords": [
+    "cypress",
+    "nodejs"
+  ],
+  "author": "Miguel Setúbal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SetubalMiguel/cypress-e2e-bug-bank/issues"
+  },
+  "homepage": "https://github.com/SetubalMiguel/cypress-e2e-bug-bank#readme",
+  "devDependencies": {
+    "cypress": "^9.7.0"
+  }
+}
