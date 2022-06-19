@@ -10,10 +10,10 @@ class Login {
         })
     }
 
-    fillLogin() {
+    fillLogin(email, pass) {
         cy.get(loc.loginInput.classFormLogin).within(function () {
-            cy.get(loc.loginInput.inputEmail).type("jonaslima2122@gmail.com", { force: true })
-            cy.get(loc.loginInput.inputPass).type("Abc123456", { force: true })
+            cy.get(loc.loginInput.inputEmail).clear({ force: true }).type(email, { force: true })
+            cy.get(loc.loginInput.inputPass).clear({ force: true }).type(pass, { force: true })
         })
     }
 
@@ -25,6 +25,19 @@ class Login {
 
     confirmMessageLogin() {
         cy.get(loc.homePage.divMessageWelcome).should('contain', 'bem vindo ao BugBank :)')
+    }
+
+    confirmMessageErroLogin() {
+        cy.get('div[class="styles__ContainerContent-sc-8zteav-1 cSdWPv"]').within(function (){
+            cy.get('p[id="modalText"]').should('have.text', 'Usuário ou senha inválido.\nTente novamente ou verifique suas informações!')
+        })
+        
+    }
+
+    pushButtonErroLogin() {
+        cy.get('div[class="styles__ContainerContent-sc-8zteav-1 cSdWPv"]').within(function () {
+            cy.get('a[id="btnCloseModal"]').click()
+        })
     }
 
 

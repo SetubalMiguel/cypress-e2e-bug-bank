@@ -32,7 +32,9 @@ const locators = {
     },
 
     homePage: {
-        divMessageWelcome: 'div[class="home__ContainerText-sc-1auj767-7 iDA-Ddb"]'
+        divMessageWelcome: 'div[class="home__ContainerText-sc-1auj767-7 iDA-Ddb"]',
+        divNav: 'div[class="home__Header-sc-1auj767-1 cVGUzT"]',
+        ButtonLogout: 'a[id="btnExit"]'
     }
 
 }
